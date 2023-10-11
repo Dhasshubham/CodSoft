@@ -1,0 +1,124 @@
+<!-- Html Code --!>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="image"> 
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Privacy</a></li>
+
+            </ul>
+            <div>
+                <a href="#" class="login-btn">Log in</a>
+                <a href="#" class="btn">Download App</a>
+
+            </div>
+        </nav>
+        <div class="content">
+            <h1>Make <br>New Friends</h1>
+            <p>
+                Socially is a new social media platform to make new Friends
+                online in the world. anow lots explore all its amazing feature.
+            </p>
+            <a href="#" class="btn">Join Now</a>
+        </div>
+        <img src="sbhu2.jpg" class="feature-img">
+    </div>
+    
+</body>
+</html>
+
+
+<!-- Css Code--!>
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(shub1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden ;
+    position: absolute;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 140px;
+}
+nav ui li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 15px ;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+.login-btn{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg,#df4881,#c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0 ;
+    transition: 0.5s;
+}
+.content{
+    margin-top: 10;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 70px;
+    color: #222;
+
+}
+.content p{
+    margin: 10px 0 30px;
+    color:#333;
+}
+.content .btn{
+    padding: 15px 80px;
+    font-size: 16px;
+}
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+.feature-img{
+    width: 380px;
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+
+}
