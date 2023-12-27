@@ -1,1 +1,54 @@
+import java.util.*;
+import java.io.*;
+public class NumberGuessingGame3{
+    public static void main(String[] args) throws IOException{
 
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Random sc = new Random();
+        int minimumRange = 1;
+        int maximumRange = 100;
+        int maximumAttempts = 10;
+        int score = 0;
+
+        System.out.println("WELCOME TO THE NUMBER GUESSING GAME ");
+
+        while (true) {
+            int numberToGuess = sc.nextInt(maximumRange - minimumRange + 1) + minimumRange;
+            int attempts = 0;
+
+            System.out.println("I've selected a number between " + minimumRange + " and " + maximumRange + ". Try to guess it!");
+
+            while (attempts < maximumAttempts) {
+                System.out.print("Enter your guess: ");
+                int userGuess = Integer.parseInt(br.readLine());
+                attempts++;
+
+                if (userGuess == numberToGuess) {
+                    System.out.println("Congratulations! You guessed the correct number in " + attempts + " attempts.");
+                    score++;
+                    break;
+
+                } else if (userGuess < numberToGuess) {
+                    System.out.println("Try higher. Attempts left: " + (maximumAttempts - attempts));
+                } else {
+                    System.out.println("Try lower. Attempts left: " + (maximumAttempts - attempts));
+                }
+            }
+
+            if (attempts >= maximumAttempts) {
+                System.out.println("You've run out of attempts. The correct number was " + numberToGuess);
+            }
+
+            System.out.print("Do you want to play again? (YES/NO): ");
+            String playAgain = br.readLine().toLowerCase();
+
+            if (!playAgain.equals("YES")) {
+                System.out.println("Thanks for playing ! Your total score is : " + score);
+                break;
+            }
+        }
+
+        br.close();
+    }
+}
